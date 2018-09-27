@@ -1,9 +1,19 @@
+/*
+ * Created Date: Friday September 21st 2018
+ * Author: VariableVasasMT (kritivasas.shukla@mindtickle.com)
+ * -----
+ * Last Modified: Friday September 21st 2018 11:05 pm
+ * Modified By: VariableVasasMT
+ * -----
+ */
+
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es2015",
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*"

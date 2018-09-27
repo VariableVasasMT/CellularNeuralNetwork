@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/bersling/typescript-library-starter#readme",
   "devDependencies": {
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "@tensorflow/tfjs-core": "0.12.15"
   }
 }
