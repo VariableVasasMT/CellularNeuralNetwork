@@ -2,7 +2,7 @@
  * Created Date: Monday September 24th 2018
  * Author: VariableVasasMT (kritivasas.shukla@mindtickle.com)
  * -----
- * Last Modified: Thursday September 27th 2018 10:30 am
+ * Last Modified: Sunday September 30th 2018 2:16 am
  * Modified By: VariableVasasMT
  * -----
  * taken and modified from https://gist.github.com/ericelliott/2d5d0cec07924a6e2d5e684da805fc94#file-observable-clock-js
@@ -36,9 +36,17 @@ class ClockAttributes extends BaseObject {
 export class Clock extends BaseObject {
   private attributes: ClockAttributes
 
-  constructor( attributes ){
+  constructor({
+    scheduler = setTimeout,  // A setTimeout() compatible scheduling API.
+    tickDelay = 20,          // Ms per tick.
+    timer = 0                // A countdown timer in ticks.
+  }){
     super();
-    this.attributes = new ClockAttributes( attributes );
+    this.attributes = new ClockAttributes( {
+      scheduler,  // A setTimeout() compatible scheduling API.
+      tickDelay,          // Ms per tick.
+      timer                // A countdown timer in ticks.
+    } );
   }
   start () {
     this.attributes.isTicking = true;
